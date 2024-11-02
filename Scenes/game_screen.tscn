@@ -1,11 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyn7mxpmipq34"]
+[gd_scene load_steps=8 format=3 uid="uid://dyn7mxpmipq34"]
 
 [ext_resource type="Script" path="res://Scripts/screen.gd" id="1_cj01n"]
 [ext_resource type="FontFile" uid="uid://b40wtusgfvd3q" path="res://Assets/HackNerdFontMono-Regular.ttf" id="2_jp4w0"]
 [ext_resource type="PackedScene" uid="uid://ckujdda4al4yn" path="res://Scenes/chess_board.tscn" id="2_oak0l"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_vsio0"]
-color = Color(1, 1, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl2ju"]
+bg_color = Color(0.424313, 0.688736, 0.94685, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6qld"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.105882, 0.364706, 0.588235, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj8ox"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw7m1"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.807843, 0.643137, 0, 1)
 
 [node name="Screen" type="Control" node_paths=PackedStringArray("commandNode", "consoleNode", "buttonNode")]
 custom_minimum_size = Vector2(1152, 648)
@@ -14,9 +42,9 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_cj01n")
-commandNode = NodePath("ScreenHB/ConsoleVB/HBoxContainer/CommandIn")
-consoleNode = NodePath("ScreenHB/ConsoleVB/ConsoleOut")
-buttonNode = NodePath("ScreenHB/ConsoleVB/HBoxContainer/Button")
+commandNode = NodePath("ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer/CommandIn")
+consoleNode = NodePath("ScreenHB/MarginContainer2/ConsoleVB/ConsoleOut")
+buttonNode = NodePath("ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer/Button")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
@@ -27,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
+color = Color(0, 0.164706, 0.301961, 1)
 
 [node name="ScreenHB" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -37,16 +65,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ChessBoard" parent="ScreenHB" instance=ExtResource("2_oak0l")]
+[node name="MarginContainer" type="MarginContainer" parent="ScreenHB"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenHB/MarginContainer"]
+layout_mode = 2
+
+[node name="ChessBoard" parent="ScreenHB/MarginContainer/VBoxContainer" instance=ExtResource("2_oak0l")]
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 0
 
-[node name="ConsoleVB" type="VBoxContainer" parent="ScreenHB"]
+[node name="ButtonBox" type="HBoxContainer" parent="ScreenHB/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NewFEN" type="Button" parent="ScreenHB/MarginContainer/VBoxContainer/ButtonBox"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_gl2ju")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h6qld")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h6qld")
+text = "New Puzzle"
+
+[node name="Move" type="Button" parent="ScreenHB/MarginContainer/VBoxContainer/ButtonBox"]
+layout_mode = 2
+theme_override_styles/disabled = SubResource("StyleBoxFlat_h6qld")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gl2ju")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h6qld")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h6qld")
+text = "Move 1000"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScreenHB"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ConsoleVB" type="VBoxContainer" parent="ScreenHB/MarginContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ConsoleOut" type="TextEdit" parent="ScreenHB/ConsoleVB"]
+[node name="ConsoleOut" type="TextEdit" parent="ScreenHB/MarginContainer2/ConsoleVB"]
 custom_minimum_size = Vector2(0, 550)
 layout_mode = 2
 size_flags_vertical = 3
@@ -54,39 +119,31 @@ theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_jp4w0")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_gj8ox")
 placeholder_text = "Process Output goes here"
 editable = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScreenHB/ConsoleVB"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenHB/MarginContainer2/ConsoleVB"]
 layout_mode = 2
 
-[node name="CommandIn" type="LineEdit" parent="ScreenHB/ConsoleVB/HBoxContainer"]
+[node name="CommandIn" type="LineEdit" parent="ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.862745, 0, 1)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_jp4w0")
 theme_override_font_sizes/font_size = 18
-theme_override_styles/normal = SubResource("StyleBoxLine_vsio0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jw7m1")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_jw7m1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jw7m1")
 placeholder_text = "UCI Command"
 flat = true
 
-[node name="Button" type="Button" parent="ScreenHB/ConsoleVB/HBoxContainer"]
+[node name="Button" type="Button" parent="ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer"]
 layout_mode = 2
 text = "Submit"
 
-[node name="ButtonVB" type="VBoxContainer" parent="ScreenHB"]
-layout_mode = 2
-
-[node name="NewFEN" type="Button" parent="ScreenHB/ButtonVB"]
-layout_mode = 2
-text = "New FEN"
-
-[node name="Move" type="Button" parent="ScreenHB/ButtonVB"]
-layout_mode = 2
-text = "Move 1000"
-
-[connection signal="text_submitted" from="ScreenHB/ConsoleVB/HBoxContainer/CommandIn" to="." method="_on_command_in_text_submitted"]
-[connection signal="pressed" from="ScreenHB/ConsoleVB/HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="ScreenHB/ButtonVB/NewFEN" to="." method="_on_new_fen_pressed"]
-[connection signal="pressed" from="ScreenHB/ButtonVB/Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="ScreenHB/MarginContainer/VBoxContainer/ButtonBox/NewFEN" to="." method="_on_new_fen_pressed"]
+[connection signal="pressed" from="ScreenHB/MarginContainer/VBoxContainer/ButtonBox/Move" to="." method="_on_move_pressed"]
+[connection signal="text_submitted" from="ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer/CommandIn" to="." method="_on_command_in_text_submitted"]
+[connection signal="pressed" from="ScreenHB/MarginContainer2/ConsoleVB/HBoxContainer/Button" to="." method="_on_button_pressed"]

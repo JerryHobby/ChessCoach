@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckujdda4al4yn"]
+[gd_scene load_steps=6 format=3 uid="uid://ckujdda4al4yn"]
 
 [ext_resource type="Script" path="res://Scripts/chess_board.gd" id="1_hm1da"]
+[ext_resource type="Texture2D" uid="uid://dufyd5ilbxng" path="res://Assets/chessThemes/board/set0/darkSquare.png" id="2_jpt0m"]
+[ext_resource type="Texture2D" uid="uid://bsrb0ecsdhwp" path="res://Assets/chessThemes/board/set0/lightSquare.png" id="3_eb4am"]
 
 [sub_resource type="Gradient" id="Gradient_wyatb"]
 colors = PackedColorArray(0.585062, 0.585062, 0.585062, 1, 0.141176, 0.286275, 0.447059, 1)
@@ -228,41 +230,53 @@ text = "8"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank8"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank8"]
 custom_minimum_size = Vector2(30, 0)
@@ -283,41 +297,53 @@ text = "7"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank7"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank7"]
 custom_minimum_size = Vector2(30, 0)
@@ -338,41 +364,53 @@ text = "6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank6"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank6"]
 custom_minimum_size = Vector2(30, 0)
@@ -393,41 +431,53 @@ text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank5"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank5"]
 custom_minimum_size = Vector2(30, 0)
@@ -448,41 +498,53 @@ text = "4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank4"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank4"]
 custom_minimum_size = Vector2(30, 0)
@@ -503,41 +565,53 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank3"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank3"]
 custom_minimum_size = Vector2(30, 0)
@@ -558,41 +632,53 @@ text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank2"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank2"]
 custom_minimum_size = Vector2(30, 0)
@@ -613,41 +699,53 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="A" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="B" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="C" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="D" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="E" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="F" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="G" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-color = Color(0.301961, 0.619608, 0.976471, 1)
+texture = ExtResource("3_eb4am")
+expand_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank1"]
+[node name="H" type="TextureRect" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+texture = ExtResource("2_jpt0m")
+expand_mode = 2
 
 [node name="RightKey" type="Label" parent="VBoxContainer/Rank1"]
 custom_minimum_size = Vector2(30, 0)
