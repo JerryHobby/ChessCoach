@@ -1,0 +1,840 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckujdda4al4yn"]
+
+[ext_resource type="Script" path="res://Scripts/chess_board.gd" id="1_hm1da"]
+
+[sub_resource type="Gradient" id="Gradient_wyatb"]
+colors = PackedColorArray(0.585062, 0.585062, 0.585062, 1, 0.141176, 0.286275, 0.447059, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mew3i"]
+gradient = SubResource("Gradient_wyatb")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[node name="ChessBoard" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -691.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hm1da")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_mew3i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TopKey" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="A" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/A"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="B" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/B"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="C" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/C"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/D"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/E"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/F"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="G" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/G"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="H" type="ColorRect" parent="VBoxContainer/TopKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopKey/H"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "H"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank8" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank8"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank7" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank7"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank6" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank6"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank5" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank5"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank4" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank4"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank3" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank3"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank2" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rank1" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="LeftKey" type="Label" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ColorRect8" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0.301961, 0.619608, 0.976471, 1)
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RightKey" type="Label" parent="VBoxContainer/Rank1"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomKey" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+columns = 10
+
+[node name="A" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/A"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="B" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/B"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="C" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/C"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/D"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/E"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/F"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="G" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/G"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="H" type="ColorRect" parent="VBoxContainer/BottomKey"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="VBoxContainer/BottomKey/H"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "H"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddyk0d5iitw7x"]
+
+[ext_resource type="Script" path="res://Scripts/square.gd" id="1_facpc"]
+[ext_resource type="Texture2D" uid="uid://bjyfr07m88fr6" path="res://Assets/chessThemes/pieces/set1/whitePawn.png" id="1_p25ha"]
+
+[node name="Square" type="ColorRect"]
+custom_minimum_size = Vector2(50, 50)
+color = Color(0.301961, 0.619608, 0.976471, 1)
+script = ExtResource("1_facpc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_p25ha")
+centered = false

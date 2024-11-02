@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyn7mxpmipq34"]
+
+[ext_resource type="Script" path="res://Scripts/screen.gd" id="1_cj01n"]
+[ext_resource type="FontFile" uid="uid://b40wtusgfvd3q" path="res://Assets/HackNerdFontMono-Regular.ttf" id="2_jp4w0"]
+[ext_resource type="PackedScene" uid="uid://ckujdda4al4yn" path="res://Scenes/chess_board.tscn" id="2_oak0l"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vsio0"]
+color = Color(1, 1, 0, 1)
+
+[node name="Screen" type="Control" node_paths=PackedStringArray("commandNode", "consoleNode", "buttonNode")]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cj01n")
+commandNode = NodePath("ScreenHB/ConsoleVB/HBoxContainer/CommandIn")
+consoleNode = NodePath("ScreenHB/ConsoleVB/ConsoleOut")
+buttonNode = NodePath("ScreenHB/ConsoleVB/HBoxContainer/Button")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="ScreenHB" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChessBoard" parent="ScreenHB" instance=ExtResource("2_oak0l")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+
+[node name="ConsoleVB" type="VBoxContainer" parent="ScreenHB"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConsoleOut" type="TextEdit" parent="ScreenHB/ConsoleVB"]
+custom_minimum_size = Vector2(0, 550)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_jp4w0")
+theme_override_font_sizes/font_size = 16
+placeholder_text = "Process Output goes here"
+editable = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenHB/ConsoleVB"]
+layout_mode = 2
+
+[node name="CommandIn" type="LineEdit" parent="ScreenHB/ConsoleVB/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.862745, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_jp4w0")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxLine_vsio0")
+placeholder_text = "UCI Command"
+flat = true
+
+[node name="Button" type="Button" parent="ScreenHB/ConsoleVB/HBoxContainer"]
+layout_mode = 2
+text = "Submit"
+
+[node name="ButtonVB" type="VBoxContainer" parent="ScreenHB"]
+layout_mode = 2
+
+[node name="NewFEN" type="Button" parent="ScreenHB/ButtonVB"]
+layout_mode = 2
+text = "New FEN"
+
+[node name="Move" type="Button" parent="ScreenHB/ButtonVB"]
+layout_mode = 2
+text = "Move 1000"
+
+[connection signal="text_submitted" from="ScreenHB/ConsoleVB/HBoxContainer/CommandIn" to="." method="_on_command_in_text_submitted"]
+[connection signal="pressed" from="ScreenHB/ConsoleVB/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ScreenHB/ButtonVB/NewFEN" to="." method="_on_new_fen_pressed"]
+[connection signal="pressed" from="ScreenHB/ButtonVB/Move" to="." method="_on_move_pressed"]
