@@ -1,4 +1,4 @@
-extends Node
+extends PanelContainer
 
 const PIECE = {
 	"Empty": " ",
@@ -16,7 +16,6 @@ const PIECE = {
 	"Black King": "k",
 }
 
-var theme = "res://Assets/chessThemes/pieces/set1/"
 
 var chess_pieces = [
 	{
@@ -67,11 +66,6 @@ var game_board = [
 func _ready() -> void:
 	setup_board()
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func setup_board(fen:String = new_game):
 	var row = 0

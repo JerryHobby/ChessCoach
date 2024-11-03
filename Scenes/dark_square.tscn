@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7y5psktynly5"]
+
+[ext_resource type="PackedScene" uid="uid://106mmwsle5xu" path="res://Scenes/base_square.tscn" id="1_uij4k"]
+
+[node name="DarkSquare" instance=ExtResource("1_uij4k")]
+dark = true

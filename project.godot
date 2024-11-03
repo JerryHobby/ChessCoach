@@ -22,6 +22,8 @@ SqlController="*res://Scripts/SQL Controller.gd"
 
 [display]
 
+window/size/viewport_width=2304
+window/size/viewport_height=1296
 window/stretch/mode="viewport"
 
 [dotnet]

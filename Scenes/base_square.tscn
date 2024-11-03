@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://106mmwsle5xu"]
+
+[ext_resource type="Texture2D" uid="uid://bsrb0ecsdhwp" path="res://Assets/chessThemes/board/set0/lightSquare.png" id="1_3887m"]
+[ext_resource type="Script" path="res://Scripts/base_square.gd" id="2_tpcn0"]
+
+[node name="Square" type="BoxContainer"]
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("2_tpcn0")
+
+[node name="BaseSquare" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("1_3887m")
+expand_mode = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

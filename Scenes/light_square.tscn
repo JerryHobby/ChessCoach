@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://csd8byyerd0y0"]
+
+[ext_resource type="PackedScene" uid="uid://106mmwsle5xu" path="res://Scenes/base_square.tscn" id="1_c0svs"]
+
+[node name="LightSquare" instance=ExtResource("1_c0svs")]
